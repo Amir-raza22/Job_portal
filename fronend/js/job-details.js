@@ -188,7 +188,7 @@ document
     .getElementById("backBtn")
     .addEventListener("click", () => {
 
-        window.location.href = "job.html";
+        window.location.href = "jobs.html";
 
     });
 document
