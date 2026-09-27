@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Portal - Jobs</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>Job Portal</h2>
+
+        <div>
+
+            <button id="homeBtn">
+                Home
+            </button>
+
+            <button id="dashboardBtn">
+                Dashboard
+            </button>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="jobs-container">
+
+    <h1>Available Jobs</h1>
+
+    <div class="job-filters">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search jobs, company..."
+        >
+
+        <input
+            type="text"
+            id="locationInput"
+            placeholder="Location"
+        >
+
+        <select id="sortSelect">
+
+            <option value="newest">
+                Newest
+            </option>
+
+            <option value="oldest">
+                Oldest
+            </option>
+
+            <option value="salary_high">
+                Highest Salary
+            </option>
+
+            <option value="salary_low">
+                Lowest Salary
+            </option>
+
+        </select>
+
+        <button id="searchBtn">
+            Search
+        </button>
+
+    </div>
+
+
+    <div id="jobsList">
+        Loading jobs...
+    </div>
+
+
+    <div id="pagination"></div>
+
+    </main>
+
+
+    <script src="js/job.js"></script>
+
+</body>
+
+</html>

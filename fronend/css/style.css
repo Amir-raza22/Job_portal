@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+    padding: 0 7%;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar h2 {
+    font-size: 24px;
+}
+
+.navbar div {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px 16px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   AUTH
+========================= */
+
+.auth-container {
+    width: 400px;
+    max-width: 90%;
+
+    margin: 80px auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container p {
+    margin-top: 18px;
+    text-align: center;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================
+   JOBS
+========================= */
+
+.jobs-container,
+.dashboard-container,
+.job-details-container {
+    width: 1100px;
+    max-width: 92%;
+
+    margin: 40px auto;
+}
+
+.jobs-container h1,
+.dashboard-container h1 {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.job-filters {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr auto;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   JOB CARD
+========================= */
+
+.job-card,
+.application-card {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.job-card h2,
+.application-card h2 {
+    margin-bottom: 12px;
+}
+
+.job-card p,
+.application-card p {
+    margin: 8px 0;
+
+    line-height: 1.5;
+}
+
+.job-card button {
+    margin-top: 12px;
+    margin-right: 8px;
+}
+
+
+/* =========================
+   JOB DETAILS
+========================= */
+
+.job-details-container {
+    max-width: 800px;
+}
+
+.job-details-container > div {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.job-details-container h1 {
+    margin-bottom: 10px;
+}
+
+.job-details-container h2 {
+    margin-bottom: 20px;
+}
+
+.job-details-container hr {
+    margin: 25px 0;
+
+    border: none;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   RECRUITER FORM
+========================= */
+
+.dashboard-container section {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.dashboard-container section h2 {
+    margin-bottom: 20px;
+}
+
+#jobForm {
+    display: grid;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+#pagination {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 30px 0;
+}
+
+#pagination button {
+    min-width: 40px;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+#message {
+    margin-top: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .job-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-container,
+    .dashboard-container,
+    .job-details-container {
+        max-width: 94%;
+    }
+
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-container {
+    width: 1100px;
+    max-width: 92%;
+    margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 0;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #2563eb;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #6b7280;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+.secondary-btn {
+    background: #e5e7eb;
+
+    color: #1f2937;
+}
+
+
+/* FEATURES */
+
+.features {
+    padding: 60px 0;
+}
+
+.features > h2 {
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    font-size: 30px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.06);
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/* HOME RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
